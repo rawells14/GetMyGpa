@@ -1,10 +1,27 @@
 #mainsect{
-    padding-left: 50%;
-    padding-right: 50%;
+    padding-top: .5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 }
-
-#inputgroup{
+#secondinput{
+    padding-top: .5%;
     padding-left: 40%;
     padding-right: 40%;
-    padding-top: 10%;
+}
+
+#inputgroups{
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 5%;
+}
+
+#progbar{
+    padding-top: .5%;
+}
+
+#progresscontainer{
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: .5%;
 }
