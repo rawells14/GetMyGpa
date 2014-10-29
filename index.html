@@ -12,13 +12,22 @@
 
     <body>
         <div id ="inputgroup">
-            <div class="input-group">
+            <div id ="input1" class="input-group">
                 <span class="input-group-addon">Current Grade</span>
                 <input type="text" class="form-control" placeholder="Ex: 91">
             </div>
         </div>
         <div id="mainsect">
-            <button type="button" class="btn btn-success">Calculate</button>
+            <div id="buttonWrapper">
+                <button id="calculateButton" type="button" class="btn btn-success">Calculate</button>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress">
+            <div id ="progbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                
+            </div>
         </div>
     </body>
 </html>
