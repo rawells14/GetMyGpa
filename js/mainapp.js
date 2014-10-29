@@ -4,7 +4,9 @@ $(document).ready(function () {
 
 
 function changeGpaElement(input){
-    
+    if (input>=5.0) {
+        
+    }
 }
 
 
