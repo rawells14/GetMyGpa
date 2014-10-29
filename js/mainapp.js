@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#buttonWrapper").click(function () {
 
         clearElements();
@@ -20,9 +21,11 @@ function changeGpaElement() {
     amtOfGpas++;
     avgGpa = ((avgGpa * (amtOfGpas - 1)) + gpa) / amtOfGpas;
     console.log(avgGpa);
-
-    $("#progbar").animate({width: (avgGpa / 6) * 100 + "%"}, 450);
-    $("#hi").val("Testing");
+    var gpaPercentage = (avgGpa / 6) * 100;
+    avgGpa = Math.round(avgGpa * 10000) / 10000;
+    $("#progbar").animate({width: gpaPercentage + "%"}, 450);
+    $("#textwrapper span").text(avgGpa);
+    
 }
 function getGpa(grade, scale) {
     var finalGpa = scale;
