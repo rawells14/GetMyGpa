@@ -1,15 +1,31 @@
 $(document).ready(function () {
 
+
     $("#buttonWrapper").click(function () {
         changeGpaElement();
+
+    });
+    $("#restart").click(function () {
+        amtOfGpas = 0;
+        avgGpa = 0;
+        $("#progbar").animate({width: 0 + "%"}, 450);
+        $("#textwrapper span").text(0.0);
+
+        $("body").append(wang);
     });
 });
+
+//global var
 var amtOfGpas = 0;
 var avgGpa = 0;
+var inputAndProgressOf = '';
+
+
 function clearElements() {
 
 }
 function changeGpaElement() {
+
     var grade = $("#input1").val();
     var scale = $("#scale").val();
     var gpa = getGpa(grade, scale);

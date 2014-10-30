@@ -11,25 +11,26 @@
     </title>
 
     <body>
-        <div id ="inputgroups">
-            <div class="input-group">
-                <span class="input-group-addon">Current Grade</span>
-                <input id ="input1" type="text" class="form-control" placeholder="Ex: 91">
+        <div id="inputwrapper">
+            <div id ="inputgroups">
+                <div class="input-group">
+                    <span class="input-group-addon">Current Grade</span>
+                    <input id ="input1" type="text" class="form-control" placeholder="Ex: 91">
+                </div>
             </div>
-        </div>
-        <div id ="secondinput">
-            <div class="input-group">
-                <span class="input-group-addon">Scale</span>
-                <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0">
+            <div id ="secondinput">
+                <div class="input-group">
+                    <span class="input-group-addon">Scale</span>
+                    <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0">
+                </div>
             </div>
-        </div>
 
-        <div id="mainsect">
-            <div id="buttonWrapper">
-                <button id="calculateButton" type="button" class="btn btn-success">Add Grade</button>
+            <div id="mainsect">
+                <div id="buttonWrapper">
+                    <button id="calculateButton" type="button" class="btn btn-success">Add Grade</button>
+                </div>
             </div>
         </div>
-
         <!-- Progress Bar -->
         <div id ="progresscontainer">
             <div class="progress">
@@ -39,9 +40,20 @@
                             0.0
                         </span>
                     </div>
-
                 </div>
             </div>
         </div>
+        <div id="mainsect">
+
+        </div>
+        <div id="restartsect">
+            <div id="restart">
+                <button type="button" class="btn btn-danger">
+                    Restart
+                </button>
+            </div>
+        </div>
+
+
     </body>
 </html>
