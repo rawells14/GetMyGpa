@@ -1,13 +1,25 @@
-#mainsect{
+.mainsect{
     padding-top: .5%;
     margin-left: auto;
     margin-right: auto;
     width: 100px;
 }
+#classNum{
+    padding-left: 47%;
+    padding-right: 47%;
+    padding-top: .5%;
+    
+
+}
 #secondinput{
     padding-top: .5%;
     padding-left: 40%;
     padding-right: 40%;
+}
+.navbarpad{
+    padding right: 50%;
+    width: 20%;
+    position: absolute;
 }
 #restartsect{
     padding-left: 46.5%;
@@ -15,14 +27,19 @@
     width: 100%;
 
 }
+#addbar{
+
+
+}
+
 
 #inputgroups{
     padding-left: 40%;
     padding-right: 40%;
-    padding-top: 5%;
+    padding-top: 3%;
 }
 
-#progbar{
+.progbarstyle{
     padding-top: .5%;
 }
 

@@ -1,59 +1,77 @@
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel ="stylesheet"  href ="css/bootstrap-3.2.0-dist/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    <script src ="js/jquery.js"></script>
-    <script src ="js/mainapp.js"></script>
 
-    <title>
-        Gpa++, The Unofficial GPA Calculator
-    </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel ="stylesheet"  href ="css/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<script src ="js/jquery.js"></script>
+<script src ="js/mainapp.js"></script>
 
-    <body>
-        <div id="inputwrapper">
-            <div id ="inputgroups">
-                <div class="input-group">
-                    <span class="input-group-addon">Current Grade</span>
-                    <input id ="input1" type="text" class="form-control" placeholder="Ex: 91">
-                </div>
-            </div>
-            <div id ="secondinput">
-                <div class="input-group">
-                    <span class="input-group-addon">Scale</span>
-                    <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0">
-                </div>
-            </div>
+<title>
+    Gpa++, The  GPA Calculator
+</title>
 
-            <div id="mainsect">
-                <div id="buttonWrapper">
-                    <button id="calculateButton" type="button" class="btn btn-success">Add Grade</button>
-                </div>
-            </div>
-        </div>
-        <!-- Progress Bar -->
-        <div id ="progresscontainer">
-            <div class="progress">
-                <div id ="progbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">                    
-                    <div id="textwrapper">
-                        <span>
-                            0.0
-                        </span>
-                    </div>
-                </div>
+
+<body>
+
+    <div id="navbar" class="navbarpad">  
+        <ul id ="list" class="nav nav-stacked" role="tablist">
+            <!--<li id = "bar" role="presentation" class="active">
+                                <a href="#">
+                                    Class 1
+                                </a>
+                            </li>-->
+        </ul>
+        <ul class="nav nav-stacked" role="tablist">
+            <li id = "addbar" role="presentation" class="active">
+                <a href="#">Add</a>
+            </li>
+        </ul>
+    </div>
+    <div id="classNum">
+
+    </div>
+    <div id="inputwrapper">
+        <div id ="inputgroups">
+            <div class="input-group">
+                <span class="input-group-addon">Current Grade</span>
+                <input id ="inputbox" type="text" class="form-control" placeholder="Ex: 91">
             </div>
         </div>
-        <div id="mainsect">
-
-        </div>
-        <div id="restartsect">
-            <div id="restart">
-                <button type="button" class="btn btn-danger">
-                    Restart
-                </button>
+        <div id ="secondinput">
+            <div class="input-group">
+                <span class="input-group-addon">Scale</span>
+                <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0">
             </div>
         </div>
 
+        <div class="mainsect">
+            <div id="buttonWrapper">
+                <button id="calculateButton" type="button" class="btn btn-success">Add Grade</button>
+            </div>
+        </div>
+    </div>
+    <!-- Progress Bar -->
+    <div id ="progresscontainer">
+        <div class="progress">
+            <div id ="progbar" class="progbarstyle progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">                    
+                <div id="textwrapper">
+                    <span>
+                        0.0
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </body>
-</html>
+
+
+    <div id="restartsect">
+        <div id="restart">
+            <button type="button" class="btn btn-danger">
+                Restart
+            </button>
+        </div>
+    </div>
+
+
+</body>
