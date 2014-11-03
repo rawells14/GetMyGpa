@@ -8,7 +8,7 @@
     padding-left: 47%;
     padding-right: 47%;
     padding-top: .5%;
-    
+
 
 }
 #secondinput{
@@ -42,7 +42,11 @@
 .progbarstyle{
     padding-top: .5%;
 }
-
+#masterprogbarcontainer{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: .5%;
+}
 #progresscontainer{
     padding-left: 30%;
     padding-right: 30%;

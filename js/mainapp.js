@@ -13,6 +13,7 @@ function appendNBI() {
     resetSettingOfInputs();
     $("#classNum").text("Class " + (navSelected + 1));
     $("#bar" + navBarVal).click(function () {
+
         resetSettingOfInputs();
         navSelected = $(this).val() - 1;
         $("#classNum").text("Class " + (navSelected + 1));
@@ -22,7 +23,14 @@ function appendNBI() {
     });
 }
 
-
+function updateAverage() {
+    var tot = 0;
+    for (var i = 0; i < data.length; i++) {
+        tot += getGpa(data[i][0], data[i][1]);
+    }
+    avgGpa = tot / data.length;
+    updateMasterProgressBar(avgGpa);
+}
 function resetSettingOfInputs() {
     $("#inputbox").attr("placeholder", "Ex: 91");
     $("#scale").attr("placeholder", "Ex: 6.0");
@@ -36,6 +44,7 @@ $(document).ready(function () {
 
     $("#buttonWrapper").click(function () {
         changeGpaElement(navSelected);
+        updateAverage();
     });
 
     $("#addbar").click(function () {
@@ -86,4 +95,29 @@ function getGpa(grade, scale) {
     grade /= 10;
     finalGpa = finalGpa - grade;
     return finalGpa;
+}
+function changeBarColor(gpaPercentage) {
+    $("#masterprogbar").removeClass("progress-bar-warning");
+    $("#masterprogbar").removeClass("progress-bar-info");
+    $("#masterprogbar").removeClass("progress-bar-danger");
+    $("#masterprogbar").removeClass("progress-bar-success");
+    if (gpaPercentage < 58.33) {
+        $("#masterprogbar").addClass("progress-bar-danger");
+    } else if (gpaPercentage >= 58.33 && gpaPercentage <= 75) {
+        $("#masterprogbar").addClass("progress-bar-warning");
+    } else if (gpaPercentage > 75 && gpaPercentage <= 83.33) {
+        $("#masterprogbar").addClass("progress-bar-success");
+    } else if (gpaPercentage > 83.33) {
+        $("#masterprogbar").addClass("progress-bar-info");
+    }
+
+
+}
+
+function updateMasterProgressBar(gpa) {
+    var gpaPercentage = (gpa / 6) * 100;
+    $("#masterprogbar").animate({width: gpaPercentage + "%"}, 450);
+    changeBarColor(gpaPercentage);
+    $("#masterprogbar").text(gpa);
+
 }
