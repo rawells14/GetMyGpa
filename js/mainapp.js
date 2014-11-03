@@ -14,12 +14,11 @@ function appendNBI() {
     $("#classNum").text("Class " + (navSelected + 1));
     $("#bar" + navBarVal).click(function () {
         resetSettingOfInputs();
-
         navSelected = $(this).val() - 1;
         $("#classNum").text("Class " + (navSelected + 1));
         $("#inputbox").val(data[navSelected][0]);
         $("#scale").val(data[navSelected][1]);
-
+        updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]))
     });
 }
 
@@ -70,11 +69,11 @@ function changeGpaElement(navBarIndex) {
     avgGpa = ((avgGpa * (amtOfGpas - 1)) + gpa) / amtOfGpas;
     console.log(avgGpa);
     avgGpa = Math.round(avgGpa * 10000) / 10000;
-    updateProgressBar(navBarIndex, gpa);
+    updateProgressBar(gpa);
 }
 
 
-function updateProgressBar(navBarIndex, gpa) {
+function updateProgressBar(gpa) {
     var gpaPercentage = (gpa / 6) * 100;
     $("#progbar").animate({width: gpaPercentage + "%"}, 450);
     $("#textwrapper span").text(gpa);
