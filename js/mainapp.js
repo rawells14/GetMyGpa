@@ -13,7 +13,6 @@ function appendNBI() {
     resetSettingOfInputs();
     $("#classNum").text("Class " + (navSelected + 1));
     $("#bar" + navBarVal).click(function () {
-
         resetSettingOfInputs();
         navSelected = $(this).val() - 1;
         $("#classNum").text("Class " + (navSelected + 1));
@@ -118,6 +117,6 @@ function updateMasterProgressBar(gpa) {
     var gpaPercentage = (gpa / 6) * 100;
     $("#masterprogbar").animate({width: gpaPercentage + "%"}, 450);
     changeBarColor(gpaPercentage);
-    $("#masterprogbar").text(gpa);
+    $("#masterprogbar").text(Math.round(gpa * 10000) / 10000);
 
 }
