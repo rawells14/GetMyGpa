@@ -18,9 +18,12 @@ function appendNBI() {
         $("#classNum").text("Class " + (navSelected + 1));
         $("#inputbox").val(data[navSelected][0]);
         $("#scale").val(data[navSelected][1]);
-        updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]))
+        updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]));
     });
 }
+$(document).keydown(function (e) {
+    
+});
 
 function updateAverage() {
     var tot = 0;
@@ -35,7 +38,7 @@ function resetSettingOfInputs() {
     $("#scale").attr("placeholder", "Ex: 6.0");
     $("#inputbox").val("");
     $("#scale").val("");
-    updateProgressBar(0, 0.0);
+    updateProgressBar(0, 0);
 }
 
 $(document).ready(function () {
