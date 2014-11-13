@@ -21,9 +21,6 @@ function appendNBI() {
         updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]));
     });
 }
-$(document).keydown(function (e) {
-    
-});
 
 function updateAverage() {
     var tot = 0;
@@ -56,11 +53,18 @@ $(document).ready(function () {
     });
 
     $("#restart").click(function () {
-        amtOfGpas = 0;
-        avgGpa = 0;
-        $("#progbar").animate({width: 0 + "%"}, 450);
-        $("#textwrapper span").text(0.0);
+        location.reload();
 
+    });
+    $(document).keydown(function (e) {
+
+        if (e.keyCode === 13) {
+            changeGpaElement(navSelected);
+            updateAverage();
+            navBarVal++;
+            appendNBI();
+
+        }
     });
 });
 
