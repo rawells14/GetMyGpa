@@ -4,7 +4,6 @@ var amtOfGpas = 0;
 var avgGpa = 0;
 var navBarVal = 1;
 var navSelected = 0;
-
 function appendNBI() {
     var $toadd = $('<li id = "bar' + (navBarVal) + '" role="presentation" class="active"><a href="#">Class ' + (navBarVal) + '</a></li>');
     $("#list").append($toadd);
@@ -54,8 +53,8 @@ $(document).ready(function () {
 
     $("#restart").click(function () {
         location.reload();
-
     });
+
     $(document).keydown(function (e) {
 
         if (e.keyCode === 13) {
@@ -63,7 +62,8 @@ $(document).ready(function () {
             updateAverage();
             navBarVal++;
             appendNBI();
-
+            $("#inputbox").focus();
+            $("#scale").val(data[data.length - 1][1]);
         }
     });
 });
