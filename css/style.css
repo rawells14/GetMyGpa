@@ -79,7 +79,9 @@
 #aboutpagesect a{
     text-decoration: none;
     color: #000000;
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 #aboutpagetitle{
     margin-left: auto;
