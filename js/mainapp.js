@@ -96,6 +96,9 @@ function updateProgressBar(gpa) {
 
 
 function getGpa(grade, scale) {
+    if (grade < 70 || grade == null) {
+        return 1.0;
+    }
     var finalGpa = scale;
     grade = 100 - grade;
     grade /= 10;
