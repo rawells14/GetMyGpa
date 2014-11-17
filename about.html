@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel ="stylesheet"  href ="css/bootstrap-3.2.0-dist/css/bootstrap.min.css">
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 <script src ="js/jquery.js"></script>
 <script src ="js/mainapp.js"></script>
 <!--Script for Google Analytics /-->
@@ -26,17 +26,18 @@
 </title>
 
 <body>
-    <a href="index.html">
-        <span class="glyphicon glyphicon-chevron-left glyphicon-2x greenGlyph" aria-hidden="true">
-            Back
-        </span>
-    </a>
+    <div id="backbutton">
+        <a href="index.html">
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                Back
+            </button>
+        </a>
+
+    </div>
     <div id="aboutpagesect">
         <div class="jumbotron">
             <h2>About GetMyGpa</h2>
-            <!--            <div id="aboutpagetitle">
-                            About GetMyGpa
-                        </div>-->
         </div>
         <a href = "https://github.com/rawells14">
             <p>Ryan Wells
@@ -60,9 +61,7 @@
                     Beta-Tester
                 </span>
             </p>
-
         </a>
-
     </div>
 </body>
 </html>

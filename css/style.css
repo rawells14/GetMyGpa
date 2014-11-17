@@ -4,26 +4,18 @@
     margin-right: auto;
     width: 100px;
 }
-.glyphicon-2x { 
-    font-size: 28px;
+.viga{
+
+    font-family: 'Viga', sans-serif;
 }
-.greenGlyph{
-    color: #19A347;
+.glyphicon-2x { 
+    font-size: 20px;
 }
 #abouttext{
     text-decoration: none;
 
 }
-#aboutbuttonwrapper{
-    float: right;
-    text-decoration-line: none;
-    padding-top: 1%;
 
-    width: 10%;
-    color: #000000;
-    font-size: 16px;
-
-}
 #classNum{
     padding-left: 47%;
     padding-right: 47%;
@@ -68,6 +60,17 @@
     padding-right: 30%;
     padding-top: .5%;
 }
+#aboutbuttonwrapper{
+    float: right;
+    text-decoration-line: none;
+    padding-top: 2%;
+    width: 10%;
+    color: #000000;
+    font-size: 20px;    
+}
+#aboutbuttontextwrapper{
+    font-family: 'Viga', sans-serif
+}
 #aboutpagesect{
     padding-top: .5%;
     margin-left: auto;
@@ -79,11 +82,20 @@
     color: #000000;
     margin-left: auto;
     margin-right: auto;
-
 }
 #aboutpagetitle{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
     font-size: 24px;
+}
+#backbutton{
+    padding-top: 2%;
+    position: absolute;
+}
+#backbutton a{
+    padding-top: 2%;
+    text-decoration: none; 
+    color: #000000;
+    position: absolute;
 }
