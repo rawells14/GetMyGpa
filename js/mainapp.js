@@ -5,6 +5,7 @@ var avgGpa = 0;
 var navBarVal = 1;
 var navSelected = 0;
 function appendNBI() {
+    amtOfGpas++;
     var $toadd = $('<li id = "bar' + (navBarVal) + '" role="presentation" class="active"><a href="#">Class ' + (navBarVal) + '</a></li>');
     $("#list").append($toadd);
     $("#bar" + navBarVal).val(navBarVal);
@@ -20,13 +21,15 @@ function appendNBI() {
         updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]));
     });
 }
-
+;
 function updateAverage() {
     var tot = 0;
     for (var i = 0; i < data.length; i++) {
-        tot += getGpa(data[i][0], data[i][1]);
+        tot += parseFloat(getGpa(data[i][0], data[i][1]));
     }
-    avgGpa = tot / data.length;
+    console.log("total" + tot);
+    avgGpa = tot / amtOfGpas;
+
     updateMasterProgressBar(avgGpa);
 }
 function resetSettingOfInputs() {
@@ -40,6 +43,22 @@ function resetSettingOfInputs() {
 $(document).ready(function () {
     appendNBI();
 
+    ($("#inputbox")).keyup(function () {
+        changeGpaElement();
+        console.log("Current Grades: " + data);
+        updateAverage();
+    });
+
+    ($("#scale")).keyup(function () {
+        changeGpaElement();
+        console.log("Current Grades: " + data);
+        updateAverage();
+    });
+
+
+
+
+
     $("#buttonWrapper").click(function () {
         changeGpaElement(navSelected);
         updateAverage();
@@ -47,7 +66,6 @@ $(document).ready(function () {
 
     $("#addbar").click(function () {
         navBarVal++;
-
         appendNBI();
     });
 
@@ -56,7 +74,6 @@ $(document).ready(function () {
     });
 
     $(document).keydown(function (e) {
-
         if (e.keyCode === 13) {
             changeGpaElement(navSelected);
             updateAverage();
@@ -70,34 +87,31 @@ $(document).ready(function () {
 
 
 
-function changeGpaElement(navBarIndex) {
+function changeGpaElement() {
 
     var grade = $("#inputbox").val();
     var scale = $("#scale").val();
-    data[navBarIndex] = [grade, scale];
-    console.log(data);
+    console.log(navSelected);
+    data[navSelected] = [grade, scale];
     var gpa = getGpa(grade, scale);
-    if (gpa > 6.0) {
-        gpa = 6.0;
-    }
-    amtOfGpas++;
-    avgGpa = ((avgGpa * (amtOfGpas - 1)) + gpa) / amtOfGpas;
-    console.log(avgGpa);
-    avgGpa = Math.round(avgGpa * 10000) / 10000;
     updateProgressBar(gpa);
+    console.log("gpa: " + gpa);
 }
 
 
 function updateProgressBar(gpa) {
     var gpaPercentage = (gpa / 6) * 100;
-    $("#progbar").animate({width: gpaPercentage + "%"}, 450);
+    $("#progbar").animate({width: gpaPercentage + "%"}, 100);
     $("#textwrapper span").text(gpa);
 }
 
 
 function getGpa(grade, scale) {
-    if (grade < 70 || grade == null) {
+    if (grade <= 70 || grade === null || isNaN(grade)) {
         return 1.0;
+    }
+    if (grade >= 100) {
+        return scale;
     }
     var finalGpa = scale;
     grade = 100 - grade;
@@ -124,8 +138,11 @@ function changeBarColor(gpaPercentage) {
 }
 
 function updateMasterProgressBar(gpa) {
+    if (isNaN(gpa)) {
+        gpa = 1.0;
+    }
     var gpaPercentage = (gpa / 6) * 100;
-    $("#masterprogbar").animate({width: gpaPercentage + "%"}, 450);
+    $("#masterprogbar").animate({width: gpaPercentage + "%"}, 100);
     changeBarColor(gpaPercentage);
     $("#masterprogbar").text(Math.round(gpa * 10000) / 10000);
 
