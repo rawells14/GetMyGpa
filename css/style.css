@@ -45,6 +45,13 @@
     padding-left: 40%;
     padding-right: 40%;
     padding-top: 3%;
+    min-width: 100px
+}
+#inputbox{
+    min-width: 100px;
+}
+#scale{
+    min-width: 100px;
 }
 
 .progbarstyle{
@@ -54,6 +61,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-top: .5%;
+
 }
 #progresscontainer{
     padding-left: 30%;

@@ -41,6 +41,8 @@ function resetSettingOfInputs() {
 }
 
 $(document).ready(function () {
+    document.cookie = "username=John Doe";
+    console.log(document.cookie);
     appendNBI();
 
     ($("#inputbox")).keyup(function () {
@@ -140,6 +142,7 @@ function changeBarColor(gpaPercentage) {
 function updateMasterProgressBar(gpa) {
     if (isNaN(gpa)) {
         gpa = 1.0;
+
     }
     var gpaPercentage = (gpa / 6) * 100;
     $("#masterprogbar").animate({width: gpaPercentage + "%"}, 100);
