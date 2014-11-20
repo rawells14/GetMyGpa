@@ -41,10 +41,9 @@ function resetSettingOfInputs() {
 }
 
 $(document).ready(function () {
-    document.cookie = "username=John Doe";
-    console.log(document.cookie);
-    appendNBI();
 
+    appendNBI();
+    
     ($("#inputbox")).keyup(function () {
         changeGpaElement();
         console.log("Current Grades: " + data);
