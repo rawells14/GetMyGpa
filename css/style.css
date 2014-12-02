@@ -29,8 +29,8 @@
     padding-right: 40%;
 }
 .navbarpad{
-    padding right: 50%;
-    width: 20%;
+    padding-right: 30%;
+    width: 40%;
     position: absolute;
 }
 #restartsect{
@@ -85,7 +85,18 @@
     margin-right: auto;
     width: 50%;
 }
+#aboutpageholder{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+#description{
+    padding-left: 24px
+}
+.titlesect{
+    font-size: 24px;
+}
 #aboutpagesect a{
+    text-indent: 24px;
     text-decoration: none;
     color: #000000;
     margin-left: auto;
