@@ -5,9 +5,10 @@
 <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src ="js/jquery.js"></script>
+<script src="js/saveapp.js"></script>
 <script src ="js/mainapp.js"></script>
 
-<script>
+<!--<script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -22,9 +23,9 @@
 
     ga('create', 'UA-56420204-1', 'auto');
     ga('send', 'pageview');
-</script>
+</script>-->
 <title>
-    Getmygpa, The simplistic GPA calculator
+    Getmygpa, The Simple GPA calculator
 </title>
 
 
@@ -47,7 +48,7 @@
         </ul>
         <ul class="nav nav-stacked" role="tablist">
             <li id = "axddbar" role="presentation" class="active">
-                <a href="#">Add</a>
+                <a href="#">Add (Enter)</a>
             </li>
         </ul>
     </div>
@@ -66,7 +67,9 @@
                 <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0" >
             </div>
         </div>
+
     </div>
+
     <!-- Progress Bar -->
     <div id ="progresscontainer">
         <div class="progress">
@@ -81,7 +84,11 @@
     </div>
 
 
-
+    <div id="savesect">
+        <button id="savebutton" type="button" class="btn btn-success">
+            Save
+        </button>  
+    </div>
     <div id="restartsect">
         <div id="restart">
             <button type="button" class="btn btn-danger">
@@ -89,6 +96,7 @@
             </button>
         </div>
     </div>
+
     <a href="about.html"></a>
     <div id = "masterprogbarcontainer">
         <div  class="progress">
