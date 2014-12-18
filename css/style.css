@@ -74,13 +74,17 @@
     padding-right: 30%;
     padding-top: .5%;
 }
-#aboutbuttonwrapper{
+.righttoolbar{
     float: right;
     text-decoration-line: none;
-    padding-top: 2%;
+    padding-top: 1%;
     width: 10%;
     color: #000000;
     font-size: 20px;
+}
+.spacer{
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 #aboutbuttontextwrapper{
     font-family: 'Viga', sans-serif

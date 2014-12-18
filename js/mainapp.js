@@ -42,8 +42,6 @@ function resetSettingOfInputs() {
 
 $(document).ready(function () {
     createCookie("username", "fjjfjfj", 34);
-    
-
     appendNBI();
 
     ($("#inputbox")).keyup(function () {
@@ -57,10 +55,6 @@ $(document).ready(function () {
         console.log("Current Grades: " + data);
         updateAverage();
     });
-
-
-
-
 
     $("#buttonWrapper").click(function () {
         changeGpaElement(navSelected);
@@ -88,8 +82,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 function changeGpaElement() {
 
     var grade = $("#inputbox").val();
@@ -101,13 +93,11 @@ function changeGpaElement() {
     console.log("gpa: " + gpa);
 }
 
-
 function updateProgressBar(gpa) {
     var gpaPercentage = (gpa / 6) * 100;
     $("#progbar").animate({width: gpaPercentage + "%"}, 100);
     $("#textwrapper span").text(gpa);
 }
-
 
 function getGpa(grade, scale) {
     if (grade <= 70 || grade === null || isNaN(grade)) {
@@ -136,18 +126,14 @@ function changeBarColor(gpaPercentage) {
     } else if (gpaPercentage > 83.33) {
         $("#masterprogbar").addClass("progress-bar-info");
     }
-
-
 }
 
 function updateMasterProgressBar(gpa) {
     if (isNaN(gpa)) {
         gpa = 1.0;
-
     }
     var gpaPercentage = (gpa / 6) * 100;
     $("#masterprogbar").animate({width: gpaPercentage + "%"}, 100);
     changeBarColor(gpaPercentage);
     $("#masterprogbar").text(Math.round(gpa * 10000) / 10000);
-
 }
