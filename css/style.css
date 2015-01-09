@@ -16,6 +16,7 @@
 
 }
 #savesect{
+    padding-top: 7%;
     padding-left: 47%;
     padding-right: 45.5%;
     width: 100%;
@@ -59,16 +60,15 @@
 #scale{
     min-width: 100px;
 }
-
+#overall-gpa{
+    left: 50%;
+    position: absolute;
+    z-index: 1;
+}
 .progbarstyle{
     padding-top: .5%;
 }
-#masterprogbarcontainer{
-    margin-left: 33%;
-    margin-right: auto;
-    position: absolute;
-    z-index: -1;
-    }
+
 #progresscontainer{
     padding-left: 30%;
     padding-right: 30%;

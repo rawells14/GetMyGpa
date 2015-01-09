@@ -129,14 +129,17 @@ function changeBarColor(gpaPercentage) {
 }
 
 function updateMasterProgressBar(gpa) {
+
     if (isNaN(gpa)) {
         gpa = 1.0;
     }
+    if (gpa > 6.0) {
+        gpa = 6.0;
+    }
     var gpaPercentage = (gpa / 6);
-
     $("#masterprogbar").animate({width: gpaPercentage + "%"}, 100);
     changeBarColor(gpaPercentage);
-    $("#masterprogbar").text(Math.round(gpa * 10000) / 10000);
+    $("#overall-gpa").text(Math.round(gpa * 10000) / 10000);
 
     $('#circle').circleProgress({
         value: gpaPercentage,
