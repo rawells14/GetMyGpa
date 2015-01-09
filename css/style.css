@@ -68,7 +68,11 @@
 .progbarstyle{
     padding-top: .5%;
 }
-
+#masterprogbarcontainer{
+    left: 32.5%;
+    position: absolute;
+    z-index: -1;
+    }
 #progresscontainer{
     padding-left: 30%;
     padding-right: 30%;
