@@ -7,7 +7,7 @@
 <script src ="../../js/jquery.js"></script>
 <script src="../../js/saveapp.js"></script>
 <script src ="../../js/mainapp.js"></script>
-
+<script src ="../../js/circle-progress.js"></script>
 
 <script>(function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -30,6 +30,9 @@
 
 
 <body>
+    <div id = "masterprogbarcontainer">
+            <div id="circle"></div>
+        </div>
     <div class="righttoolbar">
         <a href="../Login/login.html">
             <button type="button" class="btn btn-default">
@@ -73,7 +76,7 @@
         </div>
         <div id ="secondinput">
             <div class="input-group">
-                <span class="input-group-addon">Scale</span>
+                <span class="input-group-addon">Weight</span>
                 <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0" >
             </div>
         </div>
@@ -107,15 +110,7 @@
         </div>
     </div>
 
-    <div id = "masterprogbarcontainer">
-        <div  class="progress">
-            <div id = "masterprogbar" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span>
+        
 
-                </span>
-            </div>
-        </div>
-    </div>
-
-
-</body>
+    </body>
+</html>

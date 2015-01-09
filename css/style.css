@@ -64,11 +64,11 @@
     padding-top: .5%;
 }
 #masterprogbarcontainer{
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: .5%;
-
-}
+    margin-left: 33%;
+    margin-right: auto;
+    position: absolute;
+    z-index: -1;
+    }
 #progresscontainer{
     padding-left: 30%;
     padding-right: 30%;
