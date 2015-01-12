@@ -94,6 +94,12 @@ function changeGpaElement() {
 }
 
 function updateProgressBar(gpa) {
+    if (gpa <= 1) {
+        gpa = 1;
+    }
+    if (gpa >= 6.0) {
+        gpa = 6.0;
+    }
     var gpaPercentage = (gpa / 6) * 100;
     $("#progbar").animate({width: gpaPercentage + "%"}, 100);
     $("#textwrapper span").text(gpa);
@@ -128,16 +134,19 @@ function getBarColor(gpaPercentage) {
 }
 
 function updateMasterProgressBar(gpa) {
-
     if (isNaN(gpa)) {
         gpa = 1.0;
     }
+    if (gpa <= 1) {
+        gpa = 1.0;
+    }
+
     if (gpa > 6.0) {
         gpa = 6.0;
     }
+
     var gpaPercentage = (gpa / 6);
     var colorOfGraph = getBarColor(gpaPercentage);
-    console.log(gpa);
     $("#overall-gpa").text(Math.round(gpa * 10000) / 10000);
     $('#circle').circleProgress({
         value: gpaPercentage,
@@ -148,7 +157,7 @@ function updateMasterProgressBar(gpa) {
         }
     });
 }
-function initCircle(){
+function initCircle() {
     $('#circle').circleProgress({
         size: 500,
         thickness: 70
