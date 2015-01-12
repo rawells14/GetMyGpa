@@ -31,13 +31,9 @@
 
 
 <body>
-    <div id = "masterprogbarcontainer">
-            <div id="circle"></div>
-        </div>
     <div class="righttoolbar">
         <a href="html/Login/login.html">
             <button type="button" class="btn btn-default">
-
                 Login
             </button>
         </a>
@@ -49,10 +45,7 @@
             </button>
         </a>
     </div>
-
-
-
-    <div id="navbar" class="navbarpad">  
+<div id="navbar" class="navbarpad">  
         <ul id ="list" class="nav nav-stacked" role="tablist">
             <!--<li id = "bar" role="presentation" class="active">
                                 <a href="#">
@@ -66,26 +59,33 @@
             </li>
         </ul>
     </div>
-    <div id="classNum">
-    </div>
+
+   
+
+    <div id="main-body">
+         <div id="classNum"></div>
+        <div id = "masterprogbarcontainer">
+            <div id="circle"></div>
+        </div>
+
+
+    
+    
+
     <div id="inputwrapper">
-        <div id ="inputgroups">
-            <div class="input-group">
+            <div class="input-group pad">
                 <span class="input-group-addon">Current Grade</span>
                 <input id ="inputbox" type="text" class="form-control" placeholder="Ex: 91">
             </div>
-        </div>
-        <div id ="secondinput">
             <div class="input-group">
                 <span class="input-group-addon">Weight</span>
                 <input id ="scale" type="text" class="form-control" placeholder="Ex: 6.0" >
             </div>
-        </div>
-
     </div>
 
     <!-- Progress Bar -->
     <div id ="progresscontainer">
+        Class Gpa
         <div class="progress">
             <div id ="progbar" class="progbarstyle progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">                    
                 <div id="textwrapper">
@@ -96,8 +96,7 @@
             </div>
         </div>
     </div>
-
-<div id="overall-gpa"></div>
+<div id="overall-gpa">0.0</div>
     <div id="savesect">
         <button id="savebutton" type="button" class="btn btn-success">
             Save
@@ -110,5 +109,7 @@
             </button>
         </div>
     </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -1,8 +1,7 @@
-.mainsect{
-    padding-top: .5%;
+#main-body{
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 500px;
 }
 
 .glyphicon-2x { 
@@ -10,72 +9,68 @@
 }
 #abouttext{
     text-decoration: none;
-
 }
 #savesect{
-    padding-top: 7%;
-    padding-left: 47%;
-    padding-right: 45.5%;
-    width: 100%;
-    padding-bottom: 1%;
+    padding-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55px;
+}
+
+#restartsect{
+    padding-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 67px;
 }
 
 #classNum{
-    padding-left: 47%;
-    padding-right: 47%;
-    padding-top: .5%;
-
-
-}
-#secondinput{
-    padding-top: .5%;
-    padding-left: 40%;
-    padding-right: 40%;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 2%;
 }
 .navbarpad{
     padding-right: 30%;
     width: 40%;
     position: absolute;
 }
-#restartsect{
-    padding-left: 46.5%;
-    padding-right: 46.5%;
-    width: 100%;
 
-}
-
-
-#inputgroups{
-    padding-left: 40%;
-    padding-right: 40%;
-    padding-top: 3%;
-    min-width: 100px
-}
 #inputbox{
     min-width: 100px;
+}
+#inputwrapper{
+    padding-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
 }
 #scale{
     min-width: 100px;
 }
 #overall-gpa{
     font-family: Ubuntu; src: url("css/Ubuntu-L.ttf");
-    font-size: 40px;
-    left: 50%;
-    position: absolute;
+    font-size: 60px;
     z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .progbarstyle{
     padding-top: .5%;
 }
 #masterprogbarcontainer{
-    left: 32.5%;
-    position: absolute;
     z-index: -1;
+    position: absolute;
+    padding-top: 1%;
     }
+
 #progresscontainer{
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: .5%;
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .righttoolbar{
     float: right;
@@ -131,4 +126,7 @@
     text-decoration: none; 
     color: #000000;
     position: absolute;
+}
+.pad{
+    padding-bottom: 1.5%;
 }

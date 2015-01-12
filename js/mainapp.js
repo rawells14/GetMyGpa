@@ -43,7 +43,7 @@ function resetSettingOfInputs() {
 $(document).ready(function () {
     createCookie("username", "fjjfjfj", 34);
     appendNBI();
-
+    initCircle();
     ($("#inputbox")).keyup(function () {
         changeGpaElement();
         console.log("Current Grades: " + data);
@@ -141,11 +141,17 @@ function updateMasterProgressBar(gpa) {
     $("#overall-gpa").text(Math.round(gpa * 10000) / 10000);
     $('#circle').circleProgress({
         value: gpaPercentage,
-        size: 400,
-        thickness: 60,
+        size: 500,
+        thickness: 70,
         fill: {
             color: colorOfGraph
         }
+    });
+}
+function initCircle(){
+    $('#circle').circleProgress({
+        size: 500,
+        thickness: 70
     });
 }
 
