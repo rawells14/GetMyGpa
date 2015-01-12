@@ -4,10 +4,7 @@
     margin-right: auto;
     width: 100px;
 }
-.viga{
 
-    font-family: 'Viga', sans-serif;
-}
 .glyphicon-2x { 
     font-size: 20px;
 }
@@ -61,6 +58,8 @@
     min-width: 100px;
 }
 #overall-gpa{
+    font-family: Ubuntu; src: url("css/Ubuntu-L.ttf");
+    font-size: 40px;
     left: 50%;
     position: absolute;
     z-index: 1;

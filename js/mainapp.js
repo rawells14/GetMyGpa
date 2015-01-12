@@ -137,8 +137,7 @@ function updateMasterProgressBar(gpa) {
     }
     var gpaPercentage = (gpa / 6);
     var colorOfGraph = getBarColor(gpaPercentage);
-    console.log(colorOfGraph);
-    console.log(gpaPercentage);
+    console.log(gpa);
     $("#overall-gpa").text(Math.round(gpa * 10000) / 10000);
     $('#circle').circleProgress({
         value: gpaPercentage,
@@ -148,8 +147,5 @@ function updateMasterProgressBar(gpa) {
             color: colorOfGraph
         }
     });
-
-    //$("#circle").css({fill: {color: colorOfGraph}});
-
 }
 
