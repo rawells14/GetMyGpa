@@ -112,19 +112,18 @@ function getGpa(grade, scale) {
     finalGpa = finalGpa - grade;
     return finalGpa;
 }
-function changeBarColor(gpaPercentage) {
-    $("#masterprogbar").removeClass("progress-bar-warning");
-    $("#masterprogbar").removeClass("progress-bar-info");
-    $("#masterprogbar").removeClass("progress-bar-danger");
-    $("#masterprogbar").removeClass("progress-bar-success");
-    if (gpaPercentage < 58.33) {
-        $("#masterprogbar").addClass("progress-bar-danger");
-    } else if (gpaPercentage >= 58.33 && gpaPercentage <= 75) {
-        $("#masterprogbar").addClass("progress-bar-warning");
-    } else if (gpaPercentage > 75 && gpaPercentage <= 83.33) {
-        $("#masterprogbar").addClass("progress-bar-success");
-    } else if (gpaPercentage > 83.33) {
-        $("#masterprogbar").addClass("progress-bar-info");
+function getBarColor(gpaPercentage) {
+    if (gpaPercentage < .5833) {
+        return "#A23645";
+    }
+    if (gpaPercentage >= .5833 && gpaPercentage <= .75) {
+        return "#AA6639";
+    }
+    if (gpaPercentage > .75 && gpaPercentage <= .8333) {
+        return "#479030";
+    }
+    if (gpaPercentage > .8333) {
+        return "#246D5F";
     }
 }
 
@@ -137,17 +136,20 @@ function updateMasterProgressBar(gpa) {
         gpa = 6.0;
     }
     var gpaPercentage = (gpa / 6);
-    $("#masterprogbar").animate({width: gpaPercentage + "%"}, 100);
-    changeBarColor(gpaPercentage);
+    var colorOfGraph = getBarColor(gpaPercentage);
+    console.log(colorOfGraph);
+    console.log(gpaPercentage);
     $("#overall-gpa").text(Math.round(gpa * 10000) / 10000);
-
     $('#circle').circleProgress({
         value: gpaPercentage,
         size: 400,
         thickness: 60,
         fill: {
-            color: "#479030"
+            color: colorOfGraph
         }
     });
+
+    //$("#circle").css({fill: {color: colorOfGraph}});
+
 }
 
