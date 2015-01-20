@@ -41,7 +41,6 @@ function resetSettingOfInputs() {
 }
 
 $(document).ready(function () {
-    createCookie("username", "fjjfjfj", 34);
     appendNBI();
     initCircle();
     ($("#inputbox")).keyup(function () {
@@ -68,6 +67,25 @@ $(document).ready(function () {
 
     $("#restart").click(function () {
         location.reload();
+    });
+    $("#delete-bar").click(function () {
+        $("#bar" + navBarVal).remove();
+        navBarVal--;
+        amtOfGpas--;
+        $("#classNum").text("Class " + navBarVal);
+        var temp = [[]];
+        for (var i = 0; i < data.length - 1; i++) {
+            temp[i] = data[i];
+        }
+        data = temp;
+
+        changeGpaElement();
+
+        updateAverage();
+        $("#inputbox").focus();
+        $("#inputbox").val(data[navBarVal - 1][0]);
+        $("#scale").val(data[navBarVal - 1][1]);
+        console.log("Current Grades: " + data);
     });
 
     $(document).keydown(function (e) {
