@@ -79,9 +79,7 @@ $(document).ready(function () {
                 temp[i] = data[i];
             }
             data = temp;
-
             changeGpaElement();
-
             updateAverage();
             $("#inputbox").focus();
             $("#inputbox").val(data[navBarVal - 1][0]);
