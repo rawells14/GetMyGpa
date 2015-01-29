@@ -99,6 +99,9 @@ $(document).ready(function () {
         }
     });
 });
+function saveGpa(){
+    
+}
 
 function changeGpaElement() {
 
