@@ -103,6 +103,9 @@
 .titlesect{
     font-size: 24px;
 }
+a{
+
+}
 #aboutpagesect a{
     text-indent: 24px;
     text-decoration: none;
@@ -129,4 +132,8 @@
 }
 .pad{
     padding-bottom: 1.5%;
+}
+#devs{
+    font-size: 14px;
+    margin-left: 24px;
 }
