@@ -137,3 +137,9 @@ a{
     font-size: 14px;
     margin-left: 24px;
 }
+#version-info{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
