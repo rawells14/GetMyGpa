@@ -1,4 +1,4 @@
-//global var
+//global vars
 var data = [[]];
 var amtOfGpas = 0;
 var avgGpa = 0;
@@ -22,7 +22,7 @@ function appendNBI() {
         updateProgressBar(getGpa(data[navSelected][0], data[navSelected][1]));
     });
 };
-
+//updates the average of the master progress bar each time it is called
 function updateAverage() {
     var tot = 0;
     for (var i = 0; i < data.length; i++) {
