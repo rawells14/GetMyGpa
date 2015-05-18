@@ -142,16 +142,16 @@ function getGpa(grade, scale) {
 }
 function getBarColor(gpaPercentage) {
     if (gpaPercentage < .5833) {
-        return "#A23645";
+        return "#E67373";
     }
     if (gpaPercentage >= .5833 && gpaPercentage <= .75) {
-        return "#AA6639";
+        return "#E6A773";
     }
     if (gpaPercentage > .75 && gpaPercentage <= .8333) {
-        return "#479030";
+        return "#1B7C1B";
     }
     if (gpaPercentage > .8333) {
-        return "#246D5F";
+        return "#458A8A";
     }
 }
 
