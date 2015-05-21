@@ -32,6 +32,7 @@ function updateAverage() {
     avgGpa = tot / amtOfGpas;
 
     updateMasterProgressBar(avgGpa);
+    updateClassRank();
 }
 function resetSettingOfInputs() {
     $("#inputbox").attr("placeholder", "Ex: 91");
@@ -76,7 +77,7 @@ $(document).ready(function () {
             amtOfGpas--;
             $("#classNum").text("Class " + navBarVal);
             var temp = [[]];
-            for (var i = 0; i < data.length - 1; i++) {
+            for (var i = 0; i < data.length; i++) {
                 temp[i] = data[i];
             }
             data = temp;
@@ -92,7 +93,6 @@ $(document).ready(function () {
     $(document).keydown(function (e) {
         if (e.keyCode === 13) {
             changeGpaElement(navSelected);
-            updateAverage();
             navBarVal++;
             appendNBI();
             $("#inputbox").focus();
@@ -184,4 +184,20 @@ function initCircle() {
         size: 500,
         thickness: 70
     });
+}
+
+
+//Analysis: 
+var gpaForRank =      [5.5, 5.4, 5.3, 5.2, 5.0, 4.9, 4.8, 4.5, 4.0, 3.5, 2.0];
+var percentForRank = [.5, 1, 2, 4, 7, 8, 10, 15, 25, 50, 75];
+
+function updateClassRank(){
+    var top = percentForRank[0];
+    for (var i = 0; i < gpaForRank.length; i++  ) {
+        if (avgGpa <= gpaForRank[i] ) {
+            top = percentForRank[i];            
+        };
+    };
+
+    $("#estimatedRank").text("Estimated Class Rank: Top "+ top + "%");
 }

@@ -3,6 +3,12 @@
     margin-right: auto;
     width: 500px;
 }
+#estimatedRank{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    width: 200px;
+}
 
 .glyphicon-2x { 
     font-size: 20px;
